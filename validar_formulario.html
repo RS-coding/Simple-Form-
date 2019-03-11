@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2018</title>
+        <meta charset="utf-8">
+        
+        <style>
+            
+            
+            @import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700|Roboto:100,300,400,500,700,900');
+
+              
+            html,body{
+
+                margin:0;
+                height:100%;
+                
+            }
+            
+            .bg{
+                
+                height:100%;
+                background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                
+            }
+            
+            .form1{ 
+               
+                width:25%;
+                height:280px;
+               /* background-image: linear-gradient(to left top, #6b6bd1, #5a59b9, #4947a1, #38368a, #262674, #1c1e67, #12175a, #06104d, #040f45, #040c3d, #060836, #06042e); */
+                border-radius:5px;
+                box-shadow: 5px 5px 35px grey;
+                margin:0 auto;
+                padding:10px 0px;
+                
+            }
+            
+            .form1{
+              
+                transition: background-color 0.5s ease;
+                background-color:#06042e;
+            }
+            .form1:hover {
+                background-color: #EFB704;
+            }
+              
+            
+            
+            .form1 h1{
+                font-family: 'Quicksand', sans-serif;
+                font-weight:300;
+                color:#ffffffc2;
+                font-size: 45px;
+                text-align:center;
+                padding:25px;
+                margin: 0 auto;
+            }
+            
+            .form1 h1 span{
+                color:white;
+               
+            }
+            
+
+            .form1 label{
+                padding: 0px 25px 0px 25px;
+                font-family: 'Quicksand', sans-serif;
+                font-weight:400;
+                font-size : 14px;
+                color:white;
+                line-height: 45px;
+                letter-spacing: 1px;
+            }
+            
+            .form1 .txtPass1{
+                margin-left:12px;
+            }
+            
+            .form1 input[type=text] {
+                padding:5px; 
+                border-style:none;
+                border:1px solid rgba(255,255,255,0.40);
+                border-radius: 10px;
+                -webkit-border-radius: 10px;
+                border-radius: 5px;
+                background-color:rgba(255,255,255,0.34);
+                width:50%;
+            }
+            
+             .btn1{
+                margin-top:20px;
+                float:right;
+                margin-right:25px;
+                /*background-image: linear-gradient(to top, #6a85b6 0%, #bac8e0 100%);*/
+                background-color:#bac8e0;
+                border-style:none;
+                border-radius:10px;
+                padding:10px 40px;
+                color:white;
+                font-size: 16px;
+                font-family: 'Quicksand', sans-serif;
+                font-weight:400;
+                letter-spacing: 1px;
+            }
+        
+        </style>
+       
+        
+    </head>
+    <body>
+        
+        <section class="bg">
+            
+            
+                <form class="form1" action ="#" method ="POST">
+                    <h1>hell<span>oo</span>Again</h1>
+                    <label for="txtUser" class="User">User Name</label>
+                    <input type ="text" name="user" class="txtUser1" id="txtUser">
+                    <label for="txtPass" class="Pass">Password</label>
+                    <input type="text" name="pass" class="txtPass1" id ="txtPass">
+
+                    <div class="btnfloat">
+                    <button type ="submit" class="btn1" id ="btn" >SIGN IN</button>
+                    </div>
+                </form>
+            
+        </section>
+        
+    </body>
+    <script>
+       
+       (function(){
+           
+           var $txtUser = document.getElementById('txtUser');
+           var $txtPass = document.getElementById('txtPass');
+           var $btn = document.getElementById('btn');
+
+           $btn.addEventListener('click',function(e){
+               
+               if(!$txtUser.value || !$txtPass.value){
+                   
+                 alert('fill in the required fields');
+                   
+                 e.preventDefault; 
+                   
+               };
+               
+           }) ;
+           
+           
+       })();
+       
+        
+    </script>
+    
+</html>
